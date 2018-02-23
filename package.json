@@ -1,0 +1,60 @@
+{
+  "name": "webscraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "better-npm-run start",
+    "build": "babel src --out-dir build",
+    "dev": "better-npm-run dev",
+    "test": "mocha \"src/**/*.spec.js\" --compilers js:babel-register",
+    "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- \"src/**/*.spec.js\"",
+    "postinstall": "npm run build",
+    "init": "better-npm-run init"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "node ./build/index.js",
+      "env": {
+        "NODE_PATH": "./build"
+      }
+    },
+    "dev": {
+      "command": "babel-watch src/index.js",
+      "env": {
+        "NODE_PATH": "./src",
+        "NODE_ENV": "dev",
+        "PORT": 3030
+      }
+    },
+    "init": {
+      "command": "babel-node src/init.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaxoncreed/webScraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaxoncreed/webScraper/issues"
+  },
+  "homepage": "https://github.com/jaxoncreed/webScraper#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-watch": "^2.0.7",
+    "better-npm-run": "^0.1.0",
+    "scraperjs": "^1.2.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0"
+    ]
+  }
+}
