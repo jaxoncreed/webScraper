@@ -22,7 +22,7 @@ const baseUrl = 'https://www.zocdoc.com/doctor/';
 
 const BEGIN = 0;
 const END = 100000;
-const DELAY = 500;
+const DELAY = 1000;
 
 console.log('beginning');
 
@@ -96,8 +96,8 @@ async function scrape(id) {
 }
 
 
-scrape(199678);
+// scrape(199678);
 
-// for (let i = BEGIN; i <= END; i ++) {
-//   setTimeout(() => scrape(i), DELAY * i);
-// }
+for (let i = BEGIN; i <= END; i ++) {
+  setTimeout(() => scrape(i), DELAY * i);
+}
