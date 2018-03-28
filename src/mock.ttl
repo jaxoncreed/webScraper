@@ -1,0 +1,165 @@
+@base <http://medical.o.team/> .
+@prefix schema: <http://schema.org/> .
+
+<officeA>
+  a schema:Physician ;
+  schema:medicalSpecialty schema:PrimaryCare ;
+  schema:medicalSpecialty schema:Pediatric ;
+  schema:founder <docA> ;
+  schema:address <addressA> ;
+  schema:healthPlanNetwork <networkA> ;
+  schema:review <reviewA1> ;
+  schema:review <reviewA2> ;
+  schema:aggregateRating 1 .
+
+<docA>
+  a schema:Person ;
+  schema:worksFor <officeA> ;
+  schema:givenName "Aaron" ;
+  schema:familyName "Andrews" ;
+  schema:alumniOf <uniA> .
+
+<addressA>
+  a schema:PostalAddress ;
+  schema:addressCountry "US" ;
+  schema:addressLocality "Atlanta" ;
+  schema:addressRegion "GA" ;
+  schema:postalCode "30308" ;
+  schema:streetAddress "848 Spring Street NW" .
+
+<uniA>
+  a schema:CollegeOrUniversity ;
+  schema:alumni <docA> ;
+  schema:alumni <docB> ;
+  schema:name "University A" .
+
+<networkA>
+  a schema:HealthInsurancePlan ;
+  schema:name "Network A" .
+
+<reviewA1>
+  a schema:Review ;
+  schema:itemReviewed <officeA> ;
+  schema:author <person1> ;
+  schema:reviewRating <ratingA1> .
+
+<person1>
+  a schema:Person ;
+  schema:givenName "Oscar" ;
+  schema:familyName "Uno" .
+
+<ratingA1>
+  a schema:Rating ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 1 .
+
+<reviewA2>
+  a schema:Review ;
+  schema:itemReviewed <officeA> ;
+  schema:author <person2> ;
+  schema:reviewRating <ratingA2> .
+
+<person2>
+  a schema:Person ;
+  schema:givenName "Debbie" ;
+  schema:familyName "Dos" .
+
+<ratingA2>
+  a schema:Rating ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 1 .
+
+
+<officeB>
+  a schema:Physician ;
+  schema:medicalSpecialty schema:PrimaryCare ;
+  schema:medicalSpecialty schema:Pediatric ;
+  schema:founder <docB> ;
+  schema:address <addressA> ;
+  schema:healthPlanNetwork <networkA> ;
+  schema:review <reviewB1> ;
+  schema:review <reviewB2> ;
+  schema:aggregateRating 1 .
+
+<docB>
+  a schema:Person ;
+  schema:worksFor <officeB> ;
+  schema:givenName "Aaron" ;
+  schema:familyName "Andrews" ;
+  schema:alumniOf <uniA> .
+
+<reviewB1>
+  a schema:Review ;
+  schema:itemReviewed <officeB> ;
+  schema:author <person1> ;
+  schema:reviewRating <ratingB1> .
+
+<ratingB1>
+  a schema:Rating ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 1 .
+
+<reviewB2>
+  a schema:Review ;
+  schema:itemReviewed <officeB> ;
+  schema:author <person2> ;
+  schema:reviewRating <ratingB2> .
+
+<ratingB2>
+  a schema:Rating ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 1 .
+
+<officeC>
+  a schema:Physician ;
+  schema:medicalSpecialty schema:Urologic ;
+  schema:founder <docC> ;
+  schema:address <addressC> ;
+  schema:healthPlanNetwork <networkC> ;
+  schema:review <reviewC3> ;
+  schema:aggregateRating 5 .
+
+<docC>
+  a schema:Person ;
+  schema:worksFor <officeC> ;
+  schema:givenName "Charlie" ;
+  schema:familyName "Clarke" ;
+  schema:alumniOf <uniC> .
+
+<addressC>
+  a schema:PostalAddress ;
+  schema:addressCountry "US" ;
+  schema:addressLocality "Alpharetta" ;
+  schema:addressRegion "GA" ;
+  schema:postalCode "30022" ;
+  schema:streetAddress "610 Varina Way" .
+
+<uniC>
+  a schema:CollegeOrUniversity ;
+  schema:alumni <docC> ;
+  schema:name "University C" .
+
+<networkC>
+  a schema:HealthInsurancePlan ;
+  schema:name "Network C" .
+
+<reviewC3>
+  a schema:Review ;
+  schema:itemReviewed <officeC> ;
+  schema:author <person1> ;
+  schema:reviewRating <ratingC3> .
+
+<person3>
+  a schema:Person ;
+  schema:givenName "Theresa" ;
+  schema:familyName "Tres" .
+
+<ratingC3>
+  a schema:Rating ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .

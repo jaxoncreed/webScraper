@@ -1,0 +1,125 @@
+// All addresses that have more than one doctor
+BASE <http://medical.o.team/>
+PREFIX  schema:  <http://schema.org/>
+SELECT
+    ?address
+    ?addressCountry
+    ?addressRegion
+    ?postalCode
+    ?streetAddress
+    (COUNT(?office) AS ?numOffices)
+    (GROUP_CONCAT(?office) AS ?offices)
+    (GROUP_CONCAT(?doc) AS ?docs)
+    (GROUP_CONCAT(?firstName) AS ?firstNames)
+    (GROUP_CONCAT(?lastName) AS ?lastNames)
+WHERE {
+    ?office a schema:Physician .
+    ?office schema:founder ?doc .
+    ?office schema:founder/schema:givenName ?firstName .
+    ?office schema:founder/schema:familyName ?lastName .
+    ?office schema:address ?address .
+    ?address schema:addressCountry ?addressCountry .
+    ?address schema:addressRegion ?addressRegion .
+    ?address schema:postalCode ?postalCode .
+    ?address schema:streetAddress ?streetAddress .
+}
+GROUP BY ?address ?addressCountry ?addressRegion ?postalCode ?streetAddress
+HAVING (?numOffices > 1)
+
+// Doctors with less than 2 stars
+BASE <http://medical.o.team/>
+PREFIX  schema:  <http://schema.org/>
+SELECT  ?office ?doc ?firstName ?lastName ?rating
+WHERE {
+    ?office a schema:Physician .
+    ?office schema:founder ?doc .
+    ?office schema:founder/schema:givenName ?firstName .
+    ?office schema:founder/schema:familyName ?lastName .
+    ?office schema:aggregateRating ?rating .
+    FILTER (?rating < 2)
+}
+
+
+// Doctors with less than 2 reviews
+BASE <http://medical.o.team/>
+PREFIX  schema:  <http://schema.org/>
+SELECT  ?office ?doc ?firstName ?lastName (COUNT(distinct ?reviews) AS ?numReviews)
+WHERE {
+    ?office a schema:Physician .
+    ?office schema:review ?reviews .
+    ?office schema:founder ?doc .
+    ?office schema:founder/schema:givenName ?firstName .
+    ?office schema:founder/schema:familyName ?lastName .
+}
+GROUP BY ?office ?doc ?firstName ?lastName
+HAVING (?numReviews < 2)
+
+// Connect doctors with the same specialty
+BASE <http://medical.o.team/>
+PREFIX  schema:  <http://schema.org/>
+SELECT
+    ?specialty
+    (GROUP_CONCAT(?office) as ?offices)
+    (GROUP_CONCAT(?doc) as ?docs)
+    (GROUP_CONCAT(?firstName) as ?firstNames)
+    (GROUP_CONCAT(?lastName) as ?lastNames)
+WHERE {
+    ?office schema:medicalSpecialty ?specialty .
+    ?office schema:founder ?doc .
+    ?office schema:founder/schema:givenName ?firstName .
+    ?office schema:founder/schema:familyName ?lastName .
+}
+GROUP BY ?specialty
+
+// How many different doctors in the same network
+BASE <http://medical.o.team/>
+PREFIX  schema:  <http://schema.org/>
+SELECT
+    ?network
+    (COUNT(?office) AS ?numOffices)
+    (GROUP_CONCAT(?office) AS ?offices)
+    (GROUP_CONCAT(?doc) AS ?docs)
+    (GROUP_CONCAT(?firstName) AS ?firstNames)
+    (GROUP_CONCAT(?lastName) AS ?lastNames)
+WHERE {
+    ?office schema:healthPlanNetwork ?network .
+    ?office schema:founder ?doc .
+    ?office schema:founder/schema:givenName ?firstName .
+    ?office schema:founder/schema:familyName ?lastName .
+}
+GROUP BY ?network
+
+// How many names shared by more than one doctor
+BASE <http://medical.o.team/>
+PREFIX  schema:  <http://schema.org/>
+SELECT
+    ?firstName
+    ?lastName
+    (COUNT(?office) AS ?numOffices)
+    (GROUP_CONCAT(?office) AS ?offices)
+WHERE {
+    ?office schema:founder/schema:alumniOf ?uni .
+    ?office schema:founder ?doc .
+    ?office schema:founder/schema:givenName ?firstName .
+    ?office schema:founder/schema:familyName ?lastName .
+}
+GROUP BY ?firstName ?lastName
+HAVING (?numOffices > 1)
+
+// All doctors with the same name and the same university
+BASE <http://medical.o.team/>
+PREFIX  schema:  <http://schema.org/>
+SELECT
+    ?firstName
+    ?lastName
+    ?uni
+    (COUNT(?office) AS ?numOffices)
+    (GROUP_CONCAT(?office) AS ?offices)
+WHERE {
+    ?office schema:founder/schema:alumniOf ?uni .
+    ?office schema:founder ?doc .
+    ?office schema:founder/schema:givenName ?firstName .
+    ?office schema:founder/schema:familyName ?lastName .
+}
+GROUP BY ?firstName ?lastName ?uni
+HAVING (?numOffices > 1)

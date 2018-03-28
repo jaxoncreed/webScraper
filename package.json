@@ -7,6 +7,7 @@
     "start": "better-npm-run start",
     "build": "babel src --out-dir build",
     "dev": "better-npm-run dev",
+    "mock": "better-npm-run mock",
     "test": "mocha \"src/**/*.spec.js\" --compilers js:babel-register",
     "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- \"src/**/*.spec.js\"",
     "postinstall": "npm run build",
@@ -21,6 +22,14 @@
     },
     "dev": {
       "command": "babel-watch src/index.js",
+      "env": {
+        "NODE_PATH": "./src",
+        "NODE_ENV": "dev",
+        "PORT": 3030
+      }
+    },
+    "mock": {
+      "command": "babel-node src/mock.js",
       "env": {
         "NODE_PATH": "./src",
         "NODE_ENV": "dev",
@@ -45,16 +54,26 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-watch": "^2.0.7",
     "better-npm-run": "^0.1.0",
-    "scraperjs": "^1.2.0"
+    "bluebird": "^3.5.1",
+    "node-geocoder": "^3.22.0",
+    "parse-full-name": "^1.2.3",
+    "scraperjs": "^1.2.0",
+    "shortid": "^2.2.8",
+    "superagent": "^3.8.2"
   },
   "babel": {
     "presets": [
       "env",
       "stage-0"
+    ],
+    "plugins": [
+      "transform-async-to-generator"
     ]
   }
 }
