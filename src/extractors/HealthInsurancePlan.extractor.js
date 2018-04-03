@@ -5,7 +5,7 @@ import shortId from 'shortid';
 import { update, get } from '../sparql';
 
 const collection = {};
-export default function HealthInsurancePlanExtractor($, id) {
+export default function HealthInsurancePlanExtractor($, id, db) {
   return new Promise(async (resolve, reject) => {
     const names = await request.get(`https://www.zocdoc.com/insuranceinformation/ProfessionalInsurances?id=${id}`).catch((err) => {
       try {
@@ -18,6 +18,7 @@ export default function HealthInsurancePlanExtractor($, id) {
     });
 
     let subjects = await Promise.map(names, async (name) => {
+
       if (collection[name]) {
         return collection[name];
       }
@@ -39,21 +40,15 @@ export default function HealthInsurancePlanExtractor($, id) {
         result.body.head.results.bindings.length > 0
       ) {
         collection[name] = result.body.head.results.bindings[0].address.value;
-        return result.body.head.results.bindings[0].address.value;
+        return [ `<${result.body.head.results.bindings[0].address.value}>` ];
       } else {
         const newId = shortId.generate();
-        await update(`
-          BASE <http://medical.o.team/>
-          PREFIX schema: <http://schema.org/>
-          INSERT DATA {
-            <HealthInsurancePlan-${newId}> a schema:HealthInsurancePlan;
-                                            schema:name '${name}'.
-          }
-        `)
-        return `HealthInsurancePlan-${newId}`;
+        db.add(`<HealthInsurancePlan-${newId}>`, `a`, `schema:HealthInsurancePlan`);
+        db.add(`<HealthInsurancePlan-${newId}>`, `schema:name`, `"${name}"`);
+        return `<HealthInsurancePlan-${newId}>`;
       }
-    }).catch((err) => reject(err));
-
+    })
+    .catch((err) => reject(err));
     resolve(subjects);
 
   });

@@ -1,6 +1,6 @@
 
-export default function CollegeOrUniversityExtractor($) {
+export default function CollegeOrUniversityExtractor($, id, db) {
   return new Promise((resolve) => {
-    resolve(['CollegeOrUniversity']);
+    resolve(['<CollegeOrUniversity>']);
   });
 }

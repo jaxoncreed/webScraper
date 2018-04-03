@@ -11,6 +11,7 @@ import Person from './extractors/Person.extractor';
 import Review from './extractors/Review.extractor';
 import PostalAddress from './extractors/PostalAddress.extractor';
 import { update } from './sparql';
+import DB from './db.js';
 
 const geocoder = NodeGeocoder({
   provider: 'google',
@@ -20,27 +21,28 @@ const geocoder = NodeGeocoder({
 const baseUrl = 'https://www.zocdoc.com/doctor/';
 
 
-const BEGIN = 0;
-const END = 100000;
+const BEGIN = 201;
+const END = 400;
 const DELAY = 1000;
 
 console.log('beginning');
 
-async function scrape(id) {
+async function scrape(id, db) {
   scraper.StaticScraper.create(`${baseUrl}${id}`).scrape(async ($) => {
     if ($('h1.ErrorHeader').text() === 'This is a 404 page.') {
-      throw 'Not Found';
+      console.log(`${id} not found.`)
+      return;
     }
 
 
     const data = await Promise.props({
-      Physician: Physician($, id),
-      CollegeOrUniversity: CollegeOrUniversity($, id),
-      HealthInsurancePlan: HealthInsurancePlan($, id),
-      MedicalSpecialty: MedicalSpecialty($, id),
-      Person: Person($, id),
-      PostalAddress: PostalAddress($, id),
-      Review: Review($, id)
+      Physician: Physician($, id, db),
+      CollegeOrUniversity: CollegeOrUniversity($, id, db),
+      HealthInsurancePlan: HealthInsurancePlan($, id, db),
+      MedicalSpecialty: MedicalSpecialty($, id, db),
+      Person: Person($, id, db),
+      PostalAddress: PostalAddress($, id, db),
+      Review: Review($, id, db)
     }).catch((err) => {
       console.log(err);
     });
@@ -66,38 +68,32 @@ async function scrape(id) {
       Review: {}
     };
 
-
-    let query = 'BASE <http://medical.o.team/> PREFIX schema: <http://schema.org/> INSERT DATA { ';
-
     Object.keys(data).forEach((key) => {
       data[key].forEach((subject) => {
         if (Object.keys(relationships[key]).length > 0) {
-          query += `<${subject}> `
           Object.keys(relationships[key]).forEach((relKey) => {
             data[relationships[key][relKey]].forEach((directObject) => {
-              query += `${relKey} <${directObject}>; `
+              db.add(subject, relKey, directObject)
             });
           })
-          query = query.slice(0, -1) + '. ';
         }
       });
     });
-    query += '}'
 
-    update(query).then((result) => {
-      console.log(`Successfully Saved ${id}`);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+    console.log(data);
+    console.log(db.toString());
 
   })
   .catch(() => console.log(`${id} was not found.`))
 }
 
+const db = new DB();
+db.setBase('http://medical.o.team/');
+db.addPrefix('schema', 'http://schema.org/');
 
-// scrape(199678);
+scrape(199678, db);
 
-for (let i = BEGIN; i <= END; i ++) {
-  setTimeout(() => scrape(i), DELAY * i);
-}
+
+// for (let i = BEGIN; i <= END; i ++) {
+//   setTimeout(() => scrape(i), DELAY * (i - BEGIN));
+// }

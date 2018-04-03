@@ -46,9 +46,6 @@
 // });
 
 
-
-
-
 // // OTHER STUFF
 
 // import scraper from 'scraperjs';
@@ -230,3 +227,4 @@
 // // for (let i = BEGIN; i <= END; i ++) {
 // //   setTimeout(() => scrape(i), DELAY * i);
 // // }
+"use strict";

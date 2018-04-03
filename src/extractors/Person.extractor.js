@@ -1,19 +1,13 @@
 import { parseFullName } from 'parse-full-name';
 import { update } from '../sparql';
 
-export default function PersonExtractor($, id) {
+export default function PersonExtractor($, id, db) {
   const name = parseFullName($('[itemprop=name]').text().trim());
   return new Promise((resolve, reject) => {
-    update(`
-      BASE <http://medical.o.team/>
-      PREFIX schema: <http://schema.org/>
-      INSERT DATA {
-        <Person-${id}> a schema:Person;
-                       schema:givenName '${name.first}';
-                       schema:familyName '${name.last}'.
-      }
-    `)
-    .then(() => resolve([ `Person-${id}` ]))
-    .catch((err) => reject(err));
+
+    db.add(`<Person-${id}>`, `a`, `schema:Person`);
+    db.add(`<Person-${id}>`, `schema:givenName`, `"${name.first}"`);
+    db.add(`<Person-${id}>`, `schema:familyName`, `"${name.last}"`);
+    resolve([ `<Person-${id}>` ]);
   });
 }

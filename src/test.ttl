@@ -1,0 +1,688 @@
+@base <http://medical.o.team/> .
+@prefix schema: <http://schema.org/> .
+
+<Physician-199678>
+  a schema:Physician ;
+  schema:aggregateRating 4.615384615384615 ;
+  schema:address <PostalAddress-199678> ;
+  schema:founder <Person-199678> ;
+  schema:review <Review-H1fM7OeoM> ;
+  schema:review <Review-rklMf7_xjM> ;
+  schema:review <Review-r1bMzX_gsG> ;
+  schema:review <Review-H1ffzm_gof> ;
+  schema:review <Review-HJ7GMmOxoG> ;
+  schema:review <Review-B14fz7OliG> ;
+  schema:review <Review-SyHGG7OgiG> ;
+  schema:review <Review-rJIGGQdgoz> ;
+  schema:review <Review-HywMMmugsM> ;
+  schema:review <Review-rkOffmOeiM> ;
+  schema:review <Review-Sktff7_eiM> ;
+  schema:review <Review-B1cGGmOejM> ;
+  schema:review <Review-SyoGf7_eof> ;
+  schema:medicalSpecialty <MedicalSpecialty> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-H17MQ_eiz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SygQz7_goz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-B1-EzmugsG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-BJW7fQuxoz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HkYmGmOeof> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-B1GQzm_ljf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-H1q7fXdlsM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SyEQfmuxiG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HJNfQOlsf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-r1OQzX_xiG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rysQGQugsG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Hkm7f7dgsG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SJylQfQOgjG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Byg4MQugoM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HyhQGX_gsz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-S1CmzQuljz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-H1S7M7dgsM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rkMl7Mm_ejM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-S1egXGX_lof> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJvQGmOloG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-ry6Xz7desM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-r1rgXMXdlsz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-B1wxmfQugiG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SJugmGmuxof> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HyZeXfX_xoz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HyLmMXOxjM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJNxmzm_xsM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Sy7xmMQdxif> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-ryM4f7dloG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-B1FgQGQuxif> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJUx7GmOesz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Bye-mMQOliz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Bk-bmGX_esf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HJ0lQGQ_ejG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJJZQf7OejG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-H1qg7GQ_xjz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-r1aeQM7_gsG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SJolQfQOgsM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-S1neXGQdeif> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-BJOfXM7uliM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Bk7GmGm_ejM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-BJMMXf7OgsG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rycfQMX_gjM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-B1YfmG7dejz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SJp-QM7OejM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJ3GQMQuljG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-B1Dzmz7dejG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-r1izmfQOljG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SyIf7G7_xjz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HJu-7zXuljG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-r1Hf7fQuxjG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HJVG7z7_xiM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Syo-Qfmuxsf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-H1F-mfXdliz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HJ9Z7GmOgof> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SyZzQGQOxsM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-S1nbXMmOeiG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJDZmzQOesz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-BJgfXG7uljf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJCb7MXOejM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rk7EzX_loM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SJkfQMm_xjz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HkrNfmdeiG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-Hk4Wmf7Oeif> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-r1BZmzXdxjG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-BkLEMXuejz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-S1-lVMmOxsf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HkQeVf7OejG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SksNMXdeoM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HkpNGQdesM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rk3EMQ_xjf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SkF4fQOlof> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HyuNfQOesM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-ryLWXzQ_lsG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SkD4GXOxoG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-rJ5NzmOljf> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-ByVVMmugsG> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HkCEfm_lof> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-S1zg4zXugiz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-ryyg4fQOgof> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-H1xxEf7desM> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-SyfZXGQOeoz> ;
+  schema:healthPlanNetwork <HealthInsurancePlan-HymW7fXOeiz> .
+
+<Person-199678>
+  a schema:Person ;
+  schema:givenName "Leroy" ;
+  schema:familyName "Wilson" ;
+  schema:alumniOf <CollegeOrUniversity> ;
+  schema:worksFor <Physician-199678> .
+
+<Review-H1fM7OeoM>
+  a schema:Review ;
+  schema:author <Person-H1fM7OeoM> ;
+  schema:reviewBody "Great Doctor!!!!!! Highly recommended!!!!!" ;
+  schema:reviewRating <Rating-H1fM7OeoM> .
+
+<Person-H1fM7OeoM>
+  a schema:Person ;
+  schema:givenName "Quinton" ;
+  schema:familyName "E." .
+
+<Rating-H1fM7OeoM>
+  a schema:Rating ;
+  schema:author <Person-H1fM7OeoM> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-rklMf7_xjM>
+  a schema:Review ;
+  schema:author <Person-rklMf7_xjM> ;
+  schema:reviewBody "It was awesome! I would recommend to a friend." ;
+  schema:reviewRating <Rating-rklMf7_xjM> .
+
+<Person-rklMf7_xjM>
+  a schema:Person ;
+  schema:givenName "Zachary" ;
+  schema:familyName "S." .
+
+<Rating-rklMf7_xjM>
+  a schema:Rating ;
+  schema:author <Person-rklMf7_xjM> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-r1bMzX_gsG>
+  a schema:Review ;
+  schema:author <Person-r1bMzX_gsG> ;
+  schema:reviewBody "Dr. Wilson was very thorough and patient. His staff was very nice and I was told that they will call me with the results from my lab work tomorrow.  If so, I’ll be uber impressed and I’m already highly impressed. Without question, I do recommend Dr. Wilson for your  internal medicine needs. " ;
+  schema:reviewRating <Rating-r1bMzX_gsG> .
+
+<Person-r1bMzX_gsG>
+  a schema:Person ;
+  schema:givenName "Christopher" ;
+  schema:familyName "M." .
+
+<Rating-r1bMzX_gsG>
+  a schema:Rating ;
+  schema:author <Person-r1bMzX_gsG> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-H1ffzm_gof>
+  a schema:Review ;
+  schema:author <Person-H1ffzm_gof> ;
+  schema:reviewBody "Waited a while, but then again, I was a new patient. He was great! Very thorough and efficient as was his nurse." ;
+  schema:reviewRating <Rating-H1ffzm_gof> .
+
+<Person-H1ffzm_gof>
+  a schema:Person ;
+  schema:givenName "a" ;
+  schema:familyName "Patient" .
+
+<Rating-H1ffzm_gof>
+  a schema:Rating ;
+  schema:author <Person-H1ffzm_gof> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-HJ7GMmOxoG>
+  a schema:Review ;
+  schema:author <Person-HJ7GMmOxoG> ;
+  schema:reviewBody "Extremely long wait time with an empty waiting room. " ;
+  schema:reviewRating <Rating-HJ7GMmOxoG> .
+
+<Person-HJ7GMmOxoG>
+  a schema:Person ;
+  schema:givenName "a" ;
+  schema:familyName "Patient" .
+
+<Rating-HJ7GMmOxoG>
+  a schema:Rating ;
+  schema:author <Person-HJ7GMmOxoG> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 2 .
+
+<Review-B14fz7OliG>
+  a schema:Review ;
+  schema:author <Person-B14fz7OliG> ;
+  schema:reviewBody "He was great. Very knowledgable and friendly. " ;
+  schema:reviewRating <Rating-B14fz7OliG> .
+
+<Person-B14fz7OliG>
+  a schema:Person ;
+  schema:givenName "a" ;
+  schema:familyName "Patient" .
+
+<Rating-B14fz7OliG>
+  a schema:Rating ;
+  schema:author <Person-B14fz7OliG> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-SyHGG7OgiG>
+  a schema:Review ;
+  schema:author <Person-SyHGG7OgiG> ;
+  schema:reviewBody "He was awesome!" ;
+  schema:reviewRating <Rating-SyHGG7OgiG> .
+
+<Person-SyHGG7OgiG>
+  a schema:Person ;
+  schema:givenName "A'prelle" ;
+  schema:familyName "B." .
+
+<Rating-SyHGG7OgiG>
+  a schema:Rating ;
+  schema:author <Person-SyHGG7OgiG> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-rJIGGQdgoz>
+  a schema:Review ;
+  schema:author <Person-rJIGGQdgoz> ;
+  schema:reviewBody "Dr Wilson is great! He has an awesome bedside manner and I appreciate his no-bs attitude when he asked me health, diet and exercise questions. He genuinely seems to care about your health, which is sadly, rare in my experience with PCPs" ;
+  schema:reviewRating <Rating-rJIGGQdgoz> .
+
+<Person-rJIGGQdgoz>
+  a schema:Person ;
+  schema:givenName "a" ;
+  schema:familyName "Patient" .
+
+<Rating-rJIGGQdgoz>
+  a schema:Rating ;
+  schema:author <Person-rJIGGQdgoz> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-HywMMmugsM>
+  a schema:Review ;
+  schema:author <Person-HywMMmugsM> ;
+  schema:reviewBody "" ;
+  schema:reviewRating <Rating-HywMMmugsM> .
+
+<Person-HywMMmugsM>
+  a schema:Person ;
+  schema:givenName "Eugene" ;
+  schema:familyName "B." .
+
+<Rating-HywMMmugsM>
+  a schema:Rating ;
+  schema:author <Person-HywMMmugsM> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-rkOffmOeiM>
+  a schema:Review ;
+  schema:author <Person-rkOffmOeiM> ;
+  schema:reviewBody "" ;
+  schema:reviewRating <Rating-rkOffmOeiM> .
+
+<Person-rkOffmOeiM>
+  a schema:Person ;
+  schema:givenName "Michelley" ;
+  schema:familyName "P." .
+
+<Rating-rkOffmOeiM>
+  a schema:Rating ;
+  schema:author <Person-rkOffmOeiM> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-Sktff7_eiM>
+  a schema:Review ;
+  schema:author <Person-Sktff7_eiM> ;
+  schema:reviewBody "" ;
+  schema:reviewRating <Rating-Sktff7_eiM> .
+
+<Person-Sktff7_eiM>
+  a schema:Person ;
+  schema:givenName "Keith" ;
+  schema:familyName "W." .
+
+<Rating-Sktff7_eiM>
+  a schema:Rating ;
+  schema:author <Person-Sktff7_eiM> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 5 .
+
+<Review-B1cGGmOejM>
+  a schema:Review ;
+  schema:author <Person-B1cGGmOejM> ;
+  schema:reviewBody "" ;
+  schema:reviewRating <Rating-B1cGGmOejM> .
+
+<Person-B1cGGmOejM>
+  a schema:Person ;
+  schema:givenName "a" ;
+  schema:familyName "Patient" .
+
+<Rating-B1cGGmOejM>
+  a schema:Rating ;
+  schema:author <Person-B1cGGmOejM> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 4 .
+
+<Review-SyoGf7_eof>
+  a schema:Review ;
+  schema:author <Person-SyoGf7_eof> ;
+  schema:reviewBody "" ;
+  schema:reviewRating <Rating-SyoGf7_eof> .
+
+<Person-SyoGf7_eof>
+  a schema:Person ;
+  schema:givenName "a" ;
+  schema:familyName "Patient" .
+
+<Rating-SyoGf7_eof>
+  a schema:Rating ;
+  schema:author <Person-SyoGf7_eof> ;
+  schema:bestRating 5 ;
+  schema:worstRating 1 ;
+  schema:ratingValue 4 .
+
+<PostalAddress-199678>
+  a schema:PostalAddress ;
+  schema:streetAddress "315 Boulevard NE, Suite 316" ;
+  schema:addressLocality "Atlanta" ;
+  schema:addressRegion "GA" ;
+  schema:postalCode "30312" .
+
+<HealthInsurancePlan-H17MQ_eiz>
+  a schema:HealthInsurancePlan ;
+  schema:name "AARP" .
+
+<HealthInsurancePlan-SygQz7_goz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Aetna" .
+
+<HealthInsurancePlan-BJW7fQuxoz>
+  a schema:HealthInsurancePlan ;
+  schema:name "American Republic Insurance Company" .
+
+<HealthInsurancePlan-B1GQzm_ljf>
+  a schema:HealthInsurancePlan ;
+  schema:name "Anthem Blue Cross" .
+
+<HealthInsurancePlan-Hkm7f7dgsG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Alabama" .
+
+<HealthInsurancePlan-SyEQfmuxiG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Arkansas Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-H1S7M7dgsM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Kansas" .
+
+<HealthInsurancePlan-HyLmMXOxjM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Rhode Island" .
+
+<HealthInsurancePlan-rJvQGmOloG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Massachusetts " .
+
+<HealthInsurancePlan-r1OQzX_xiG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Beech Street" .
+
+<HealthInsurancePlan-HkYmGmOeof>
+  a schema:HealthInsurancePlan ;
+  schema:name "AmeriGroup" .
+
+<HealthInsurancePlan-H1q7fXdlsM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Anthem Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-rysQGQugsG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-HyhQGX_gsz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Georgia" .
+
+<HealthInsurancePlan-ry6Xz7desM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Michigan" .
+
+<HealthInsurancePlan-S1CmzQuljz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Illinois" .
+
+<HealthInsurancePlan-SJylQfQOgjG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Arizona" .
+
+<HealthInsurancePlan-S1egXGX_lof>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Louisiana" .
+
+<HealthInsurancePlan-HyZeXfX_xoz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of North Carolina" .
+
+<HealthInsurancePlan-rkMl7Mm_ejM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Kansas City" .
+
+<HealthInsurancePlan-Sy7xmMQdxif>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Tennessee" .
+
+<HealthInsurancePlan-rJNxmzm_xsM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of South Carolina" .
+
+<HealthInsurancePlan-r1rgXMXdlsz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Minnesota" .
+
+<HealthInsurancePlan-rJUx7GmOesz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Western New York" .
+
+<HealthInsurancePlan-B1wxmfQugiG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Nebraska" .
+
+<HealthInsurancePlan-SJugmGmuxof>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of New Mexico" .
+
+<HealthInsurancePlan-B1FgQGQuxif>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Vermont" .
+
+<HealthInsurancePlan-H1qg7GQ_xjz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Shield of Northeastern New York" .
+
+<HealthInsurancePlan-SJolQfQOgsM>
+  a schema:HealthInsurancePlan ;
+  schema:name "CareFirst Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-S1neXGQdeif>
+  a schema:HealthInsurancePlan ;
+  schema:name "Caterpillar" .
+
+<HealthInsurancePlan-r1aeQM7_gsG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Capital Blue Cross" .
+
+<HealthInsurancePlan-HJ0lQGQ_ejG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross of Northeastern Pennsylvania" .
+
+<HealthInsurancePlan-rJJZQf7OejG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Shield of California" .
+
+<HealthInsurancePlan-Bye-mMQOliz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Wyoming" .
+
+<HealthInsurancePlan-Bk-bmGX_esf>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross of Idaho" .
+
+<HealthInsurancePlan-SyfZXGQOeoz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Wellcare" .
+
+<HealthInsurancePlan-HymW7fXOeiz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Wellmark Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-Hk4Wmf7Oeif>
+  a schema:HealthInsurancePlan ;
+  schema:name "Memorial Hermann" .
+
+<HealthInsurancePlan-r1BZmzXdxjG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Moda Health" .
+
+<HealthInsurancePlan-ryLWXzQ_lsG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Stratose" .
+
+<HealthInsurancePlan-rJDZmzQOesz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Horizon Blue Cross Blue Shield of New Jersey" .
+
+<HealthInsurancePlan-HJu-7zXuljG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Florida Blue: Blue Cross Blue Shield of Florida" .
+
+<HealthInsurancePlan-H1F-mfXdliz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Health Net" .
+
+<HealthInsurancePlan-HJ9Z7GmOgof>
+  a schema:HealthInsurancePlan ;
+  schema:name "HighMark Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-Syo-Qfmuxsf>
+  a schema:HealthInsurancePlan ;
+  schema:name "Harken Health" .
+
+<HealthInsurancePlan-S1nbXMmOeiG>
+  a schema:HealthInsurancePlan ;
+  schema:name "HighMark Blue Shield" .
+
+<HealthInsurancePlan-SJp-QM7OejM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Coventry Health Care" .
+
+<HealthInsurancePlan-rJCb7MXOejM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Independence Blue Cross" .
+
+<HealthInsurancePlan-SJkfQMm_xjz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Magellan Health" .
+
+<HealthInsurancePlan-BJgfXG7uljf>
+  a schema:HealthInsurancePlan ;
+  schema:name "Humana" .
+
+<HealthInsurancePlan-SyZzQGQOxsM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Highmark Blue Cross Blue Shield of Delaware" .
+
+<HealthInsurancePlan-BJMMXf7OgsG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Cigna" .
+
+<HealthInsurancePlan-Bk7GmGm_ejM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Cenpatico" .
+
+<HealthInsurancePlan-HJVG7z7_xiM>
+  a schema:HealthInsurancePlan ;
+  schema:name "GeoBlue" .
+
+<HealthInsurancePlan-r1Hf7fQuxjG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Galaxy Health" .
+
+<HealthInsurancePlan-SyIf7G7_xjz>
+  a schema:HealthInsurancePlan ;
+  schema:name "First Health (Coventry Health Care)" .
+
+<HealthInsurancePlan-B1Dzmz7dejG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Evolutions Healthcare Systems" .
+
+<HealthInsurancePlan-BJOfXM7uliM>
+  a schema:HealthInsurancePlan ;
+  schema:name "CBA Blue" .
+
+<HealthInsurancePlan-B1YfmG7dejz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Companion Life" .
+
+<HealthInsurancePlan-rycfQMX_gjM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Cigna-HealthSpring" .
+
+<HealthInsurancePlan-r1izmfQOljG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Excellus Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-rJ3GQMQuljG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Empire Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-HJNfQOlsf>
+  a schema:HealthInsurancePlan ;
+  schema:name "Assurant Health" .
+
+<HealthInsurancePlan-Byg4MQugoM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Florida (Florida Blue)" .
+
+<HealthInsurancePlan-B1-EzmugsG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Alliant Health Plans" .
+
+<HealthInsurancePlan-ryM4f7dloG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Blue Cross Blue Shield of Texas" .
+
+<HealthInsurancePlan-rk7EzX_loM>
+  a schema:HealthInsurancePlan ;
+  schema:name "LifeSynch" .
+
+<HealthInsurancePlan-ByVVMmugsG>
+  a schema:HealthInsurancePlan ;
+  schema:name "United Behavioral Health" .
+
+<HealthInsurancePlan-HkrNfmdeiG>
+  a schema:HealthInsurancePlan ;
+  schema:name "MCM Maxcare" .
+
+<HealthInsurancePlan-BkLEMXuejz>
+  a schema:HealthInsurancePlan ;
+  schema:name "Multiplan PHCS" .
+
+<HealthInsurancePlan-SkD4GXOxoG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Tricare" .
+
+<HealthInsurancePlan-HyuNfQOesM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Regence Blue Cross Blue Shield" .
+
+<HealthInsurancePlan-SkF4fQOlof>
+  a schema:HealthInsurancePlan ;
+  schema:name "Prime Health Services, Inc" .
+
+<HealthInsurancePlan-rJ5NzmOljf>
+  a schema:HealthInsurancePlan ;
+  schema:name "Triple-S Salud: Blue Cross Blue Shield of Puerto Rico" .
+
+<HealthInsurancePlan-SksNMXdeoM>
+  a schema:HealthInsurancePlan ;
+  schema:name "Piedmont WellStar Health Plans" .
+
+<HealthInsurancePlan-rk3EMQ_xjf>
+  a schema:HealthInsurancePlan ;
+  schema:name "Premera Blue Cross" .
+
+<HealthInsurancePlan-HkpNGQdesM>
+  a schema:HealthInsurancePlan ;
+  schema:name "POMCO" .
+
+<HealthInsurancePlan-HkCEfm_lof>
+  a schema:HealthInsurancePlan ;
+  schema:name "UnitedHealthcare" .
+
+<HealthInsurancePlan-ryyg4fQOgof>
+  a schema:HealthInsurancePlan ;
+  schema:name "US Health Group" .
+
+<HealthInsurancePlan-H1xxEf7desM>
+  a schema:HealthInsurancePlan ;
+  schema:name "USA Managed Care Organization" .
+
+<HealthInsurancePlan-S1-lVMmOxsf>
+  a schema:HealthInsurancePlan ;
+  schema:name "NovaNet" .
+
+<HealthInsurancePlan-S1zg4zXugiz>
+  a schema:HealthInsurancePlan ;
+  schema:name "UnitedHealthOne" .
+
+<HealthInsurancePlan-HkQeVf7OejG>
+  a schema:HealthInsurancePlan ;
+  schema:name "Peach State Health Plan" .
+
+<CollegeOrUniversity>
+  schema:alumni <Person-199678> .
