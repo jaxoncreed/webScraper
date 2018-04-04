@@ -39,10 +39,11 @@ export default function HealthInsurancePlanExtractor($, id, db) {
         result.body.head.results.bindings &&
         result.body.head.results.bindings.length > 0
       ) {
-        collection[name] = result.body.head.results.bindings[0].address.value;
-        return [ `<${result.body.head.results.bindings[0].address.value}>` ];
+        collection[name] = result.body.head.results.bindings[0].plan.value;
+        return `<${result.body.head.results.bindings[0].plan.value}>`;
       } else {
         const newId = shortId.generate();
+        collection[name] = `<HealthInsurancePlan-${newId}>`;
         db.add(`<HealthInsurancePlan-${newId}>`, `a`, `schema:HealthInsurancePlan`);
         db.add(`<HealthInsurancePlan-${newId}>`, `schema:name`, `"${name}"`);
         return `<HealthInsurancePlan-${newId}>`;

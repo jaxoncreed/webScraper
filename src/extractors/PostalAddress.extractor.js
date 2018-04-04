@@ -1,6 +1,8 @@
 
 import { update, get } from '../sparql';
 
+const collection = {};
+
 export default function PostalAddressExtractor($, id, db) {
   const address = {
     streetAddress: $('[itemprop=streetAddress]').text().trim().slice(0, -1),
@@ -9,6 +11,11 @@ export default function PostalAddressExtractor($, id, db) {
     postalCode: $('[itemprop=postalCode]').text().trim(),
   }
   return new Promise((resolve, reject) => {
+    const key = `${address.streetAddress}|${address.addressLocality}|${address.addressRegion}|${address.postalCode}`
+    if (collection[key]) {
+      return collection[key];
+    }
+
     get(`
       BASE <http://medical.o.team/>
       PREFIX schema: <http://schema.org/>
@@ -29,9 +36,10 @@ export default function PostalAddressExtractor($, id, db) {
         result.body.head.results.bindings &&
         result.body.head.results.bindings.length > 0
       ) {
+        collection[key] = result.body.head.results.bindings[0].address.value;
         resolve([ `<${result.body.head.results.bindings[0].address.value}>` ]);
       } else {
-
+        collection[key] = `<PostalAddress-${id}>`;
         db.add(`<PostalAddress-${id}>`, `a`, `schema:PostalAddress`);
         db.add(`<PostalAddress-${id}>`, `schema:streetAddress`, `"${address.streetAddress}"`);
         db.add(`<PostalAddress-${id}>`, `schema:addressLocality`, `"${address.addressLocality}"`);
