@@ -7,12 +7,14 @@ export default function RatingExtractor($, id, db) {
     const ratings = $('[itemprop=reviews]').map(function() {
       return {
         rating: $(this).find('[itemprop=ratingValue]').attr('content'),
-        text: $(this).find('[itemprop=reviewBody]').text(),
+        text: $(this).find('[itemprop=reviewBody]').text().replace(/\r?\n?/g, '').replace(new RegExp('"', 'g'), '\\"').trim(),
         author: parseFullName($(this).find('[itemprop=author]').text().substring(3))
       }
     }).get();
 
-    db.add(`<Physician-${id}>`, `schema:aggregateRating`, ratings.reduce((agg, rating) => agg + parseFloat(rating.rating), 0) / ratings.length);
+    if (ratings.length > 0) {
+      db.add(`<Physician-${id}>`, `schema:aggregateRating`, ratings.reduce((agg, rating) => agg + parseFloat(rating.rating), 0) / ratings.length);
+    }
 
     const ratingUrls = [];
     ratings.forEach((rating) => {

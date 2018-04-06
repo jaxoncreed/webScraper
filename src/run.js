@@ -23,8 +23,8 @@ const baseUrl = 'https://www.zocdoc.com/doctor/';
 
 
 const BEGIN = 0;
-const END = 200000;
-const DELAY = 500;
+const END = 400;
+const DELAY = 750;
 const SAVE_INTERVAL = 200;
 
 console.log('beginning');
@@ -71,7 +71,9 @@ async function scrape(id, db) {
           'schema:worksFor': 'Physician'
         },
         PostalAddress: {},
-        Review: {}
+        Review: {
+          'schema:itemReviewed': 'Physician'
+        }
       };
 
       Object.keys(data).forEach((key) => {
@@ -98,18 +100,19 @@ db.addPrefix('schema', 'http://schema.org/');
 
 // scrape(199678, db);
 
+const processSave = (i, db) => {
+  if ((i - BEGIN) % SAVE_INTERVAL === 0) {
+    console.log(`${__dirname}/output/output${i - BEGIN}.ttl`);
+    createIfNotExist(`${__dirname}/output/output${i - BEGIN}.ttl`, db.toString(), (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  }
+};
 
 for (let i = BEGIN; i <= END; i ++) {
   setTimeout(async () => {
-    scrape(i, db).then(() => {
-      if ((i - BEGIN) % SAVE_INTERVAL === 0) {
-        console.log(`${__dirname}/output/output${i - BEGIN}.ttl`);
-        createIfNotExist(`${__dirname}/output/output${i - BEGIN}.ttl`, db.toString(), (err) => {
-          if (err) {
-            console.log(err);
-          }
-        });
-      }
-    });
+    scrape(i, db).then(() => processSave(i, db)).catch(() => processSave(i, db));
   }, DELAY * (i - BEGIN));
 }

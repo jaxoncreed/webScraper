@@ -1,3 +1,0 @@
-@base <http://medical.o.team/> .
-@prefix schema: <http://schema.org/> .
-
